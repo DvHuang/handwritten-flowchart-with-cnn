@@ -71,7 +71,7 @@ Shapely==1.7.0
 six==1.14.0
 tensorboard==2.2.0
 tensorflow==2.2.0
-tensorflow-estimator==2.1.0
+tensorflow-estimator==2.2.0
 termcolor==1.1.0
 Theano==1.0.4
 tifffile==2020.5.11
