@@ -10,3 +10,8 @@ then
 	python3 shape_model.py
 fi
 
+if [ $step = "inference" ]
+then
+	cd model/
+	python3 shape_classifier.py /data/Dataset/0.jpg /data/Model/ 
+fi

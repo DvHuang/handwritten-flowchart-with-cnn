@@ -568,25 +568,25 @@ if __name__ == '__main__':
 	# 	bbox_threshold = 0.6
 	# 	folder_name = "test_3"
 
-	"""overlap_thresh_1 = 0.7
-	overlap_thresh_2 = 0.05
-	bbox_threshold = 0.45
-
-	img_path = "/home/david/Escritorio/set10/49.jpg"
+	"""
+            overlap_thresh_1 = 0.7
+	    overlap_thresh_2 = 0.05
+	    bbox_threshold = 0.45
+        """
+	img_path = sys.argv[1] 
 
 	# The best model is in folder 9 (training results)
 	classifier = ShapeClassifier(
-		results_path="training_results/9",
-		use_gpu=False,
+		results_path=sys.argv[2],
+		use_gpu=True,
 		overlap_thresh_1=overlap_thresh_1,
 		overlap_thresh_2=overlap_thresh_2,
 		bbox_threshold=bbox_threshold,
 		num_rois=32
 	)
 	image = cv2.imread(img_path)
-<<<<<<< HEAD
 	nodes = classifier.predict(image, True)
-	print(*enumerate(nodes))"""
+	print(*enumerate(nodes))
 
 
 	# test_path = "/home/david/Escritorio/set" + str(test) + "/"
