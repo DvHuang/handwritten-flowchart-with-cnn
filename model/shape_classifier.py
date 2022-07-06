@@ -18,12 +18,12 @@ from keras import backend as K
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
-from . frcnn.cnn import CNN
-from . frcnn.roi_helpers import ROIHelpers
-from . frcnn.data_generator import Metrics
-from . frcnn.utilities.config import Config
-from . frcnn.utilities.parser import Parser
-from . frcnn.utilities.image_tools import ImageTools
+from frcnn.cnn import CNN
+from frcnn.roi_helpers import ROIHelpers
+from frcnn.data_generator import Metrics
+from frcnn.utilities.config import Config
+from frcnn.utilities.parser import Parser
+from frcnn.utilities.image_tools import ImageTools
 sys.path.append("model")
 import frcnn
 sys.path.append('..')
@@ -174,6 +174,7 @@ class ShapeClassifier(object):
 			with (open(config_path, 'rb')) as f_in:
 				self.config = pickle.load(f_in)
 			print("Config loaded successful!!")
+			self.config.weights_output_path=results_path
 		except Exception as e:
 			print("Could not load configuration file, check results path!")
 			exit()
@@ -233,7 +234,8 @@ class ShapeClassifier(object):
 		# uncomment for integration with handler
 		#model_path = "model/"+self.config.weights_output_path
 		# comment for integration
-		model_path = "model/"+self.config.weights_output_path
+		#model_path = "model/"+self.config.weights_output_path
+		model_path = self.config.weights_output_path + "/flowchart_3b_model.hdf5"
 
 		try:
 			print('Loading weights from {}'.format(model_path))
