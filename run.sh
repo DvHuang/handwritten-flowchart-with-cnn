@@ -26,5 +26,5 @@ fi
 if [ $step = "inference" ]
 then
 	cd model/
-	python3 shape_classifier.py /data/Dataset/16.jpg /data/Model/ 
+	CUDA_VISIBLE_DEVICES=0 python3 shape_classifier.py /data/Dataset/16.jpg /data/Model/ 
 fi
