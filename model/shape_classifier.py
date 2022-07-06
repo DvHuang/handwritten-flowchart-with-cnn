@@ -570,11 +570,9 @@ if __name__ == '__main__':
 	# 	bbox_threshold = 0.6
 	# 	folder_name = "test_3"
 
-	"""
-            overlap_thresh_1 = 0.7
-	    overlap_thresh_2 = 0.05
-	    bbox_threshold = 0.45
-        """
+	overlap_thresh_1 = 0.7 
+	overlap_thresh_2 = 0.05
+	bbox_threshold = 0.45
 	img_path = sys.argv[1] 
 
 	# The best model is in folder 9 (training results)
